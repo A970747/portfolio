@@ -3,30 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css" media="all"/>
     <title>Document</title>
 </head>
 <body>
-    <header class="container clearfix">
-        <h1>
-            <span class="title">Matt Jackson</span>
-            <span class="title">Web Developer</span>
-        </h1>
+    <header>
+        <div class="nav-wrapper">
+            <nav>
+                <ul class="nav-items">
+                    <li><a href=""  target="_blank">top</a></li>
+                    <li><a href=""  target="_blank">skills</a></li>
+                    <li><a href="" target="_blank">portfolio</a></li>
+                    <li><a href="" target="_blank">contact</a></li>
+                </ul>
+                <div class="nav-toogler"></div>
+            </nav>
+        </div>
+        <!-- <div id="hello" class="canvas">
+            <canvas id="canvas" width="400" height="400" style="border:5px solid red"></canvas>
+        </div> -->
+        <div class="wrapperHeader">
+            <div class="nameContainer">
+                <h1>
+                    <span class="title">Matt Jackson</span>
+                    <span class="title"> Web Developer</span>
+                </h1>
+            </div>
+            <div class="resumeContainer">
+                <a class="resumeLink" href="" alt="Link resume" target="_blank">resume</a>
+                <a href="https://www.linkedin.com/in/mattjacksondev/" target="_blank"><img src="/styles/images/linkedin.png" alt="LinkedIn Icon" class="resumeIcon" ria-label="Link Linked in page"></img></a>
+                <a href="https://github.com/A970747" target="_blank"><img src="/styles/images/github.png" alt="GitHub icon" class="resumeIcon" ria-label="Link Git hub"></img></a>
+            </div>
+        </div>
     </header>
-    <div class="thisClass">
-        <h2>next section</h2>
-        <h3>no really, it is</h3>
-        <h4>no really</h4>
-    </div>
-    <section class="skillSection"></section>
-    <section class="projectSection"></section>
-    
-    <footer>
 
+    <section class="skillSection">
+        <h2>skills</h2>
+        <ul class="skillGrid">
+            <li class="skillFlex"><img src="/styles/images/html-5.png" alt="html icon" class="skillIcon" aria-hidden="true"></img>html</li>
+            <li class="skillFlex"><img src="/styles/images/css3.png" alt="css icon" class="skillIcon" aria-hidden="true"></img>css</li>
+            <li class="skillFlex"><img src="/styles/images/sass.png" alt="sass icon" class="skillIcon" aria-hidden="true"></img>sass</li>
+            <li class="skillFlex"><img src="/styles/images/javascript.png" alt="javascript icon" class="skillIcon" aria-hidden="true"></img>javascript</li>
+            <li class="skillFlex"><img src="/styles/images/react-native.png" alt="react icon" class="skillIcon" aria-hidden="true"></img>reactJS</li>
+            <li class="skillFlex"><img src="/styles/images/nodejs.png" alt="node icon" class="skillIcon" aria-hidden="true"></img>nodeJS</li>
+            <li class="skillFlex"><img src="/styles/images/git.png" alt="git icon" class="skillIcon" aria-hidden="true"></img>github</li>
+            <li class="skillFlex"><img src="/styles/images/rest.png" alt="api icon" class="skillIcon" aria-hidden="true"></img>restful APIs</li>
+            <li class="skillFlex"><img src="/styles/images/firebase.png" alt="firebase icon" class="skillIcon" aria-hidden="true"></img>firebase</li>
+            <li class="skillFlex"><img src="/styles/images/mysql-logo.png" alt="mysql icon" class="skillIcon" aria-hidden="true"></img>mysql</li>
+            <li class="skillFlex"><img src="/styles/images/vscode.png" alt="VS code icon" class="skillIcon" aria-hidden="true"></img>VS code</li>
+            <li class="skillFlex"><img src="/styles/images/linux.png" alt="linux icon" class="skillIcon" aria-hidden="true"></img>linux</li>
+        </ul>
+    </section>
+
+    <section class="darkSection">
+        <div class="wrapper-900">
+            <h2>portfolio</h2>
+            <div class="portfolioPiece">
+                <img src="https://source.unsplash.com/random/300x200" alt="">
+                <h3>tv show thing</h3>
+                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            </div>
+            <div class="portfolioPiece">
+                <img src="https://source.unsplash.com/random/300x200" alt="">
+                <h3>guess the word</h3>
+                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            </div>
+            <div class="portfolioPiece">
+                <img src="https://source.unsplash.com/random/300x200" alt="">
+                <h3>guess the word</h3>
+                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="lightSection">
+        <div class="wrapper-900">
+            <h2>about me</h2>
+            <div class="portfolioPiece">
+                <img src="https://source.unsplash.com/random/400x400" alt="">
+                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="darkSection">
+        <div class="wrapper-900">
+            <h2>about me</h2>
+            <div class="portfolioPiece">
+                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
     </footer>
-    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6' crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="./scripts/script.js"></script>
+    <!-- <script type="text/javascript" src="./node_modules/pts/dist/pts.js"></script>
+    <script type="text/javascript" src="./scripts/star-script.js"></script> -->
 </body>
 </html>

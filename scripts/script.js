@@ -1,13 +1,3 @@
-$(document).ready(function () {
-    $(".title").lettering();
-    $(".button").lettering();
-});
-
-$(document).ready(
-    function () {
-        animation();
-}, 1000);
-
 function animation() {
     let title1 = new TimelineMax();
     title1.to(".button", 0, { visibility: 'hidden', opacity: 0 })
@@ -16,3 +6,13 @@ function animation() {
         { ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0 }, 0.05);
     title1.to(".button", 0.2, { visibility: 'visible', opacity: 1 })
 }
+
+document.querySelector('.nav-toogler').addEventListener('click', function () {
+    document.querySelector('.nav-wrapper').classList.toggle('active')
+})
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    $(".title").lettering();
+    $(".button").lettering();
+    animation();
+});
