@@ -252,7 +252,9 @@ ul {
 }
 
 .wrapper-900 {
+  width: 75%;
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .wrapperHeader {
@@ -320,7 +322,8 @@ ul {
   list-style: none;
 }
 
-h1 {
+h1,
+.name {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -329,8 +332,8 @@ h1 {
   text-transform: uppercase;
   font-size: 70px;
   font-size: calc(4vh + 2.5vw);
-  line-height: 75px;
-  line-height: calc(4.5vh + 2.5vw);
+  line-height: 60px;
+  line-height: calc(2vh + 2vw);
   letter-spacing: 2px;
   margin: 15px;
 }
@@ -340,15 +343,27 @@ h2 {
   color: white;
 }
 
+p {
+  text-align: justify;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.title,
 span {
-  -webkit-transform: skew(-10deg);
-          transform: skew(-10deg);
-  display: block;
+  -webkit-transform: skew(-12deg);
+          transform: skew(-12deg);
   float: left;
   text-shadow: #383838 1px 1px, #383838 2px 2px, #383838 3px 3px, #383838 4px 4px, #383838 5px 5px, #383838 6px 6px;
   min-width: 10px;
   min-height: 10px;
   position: relative;
+}
+
+.title {
+  display: inline;
 }
 
 .title:nth-child(1) {
@@ -357,18 +372,6 @@ span {
 
 .title:nth-child(2) {
   color: tomato;
-}
-
-.skillSection {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
-          clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
-  padding: 150px 0 200px 0;
 }
 
 .skillSection h2 {
@@ -423,11 +426,13 @@ span {
   text-decoration: none;
   -webkit-transition: .3s;
   transition: .3s;
+  font-size: 20px;
+  font-size: calc(2vh);
 }
 
 .nav-wrapper nav a:focus,
 .nav-wrapper nav a:hover {
-  color: white;
+  color: tomato;
 }
 
 .nav-wrapper nav ul {
@@ -447,12 +452,12 @@ span {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   opacity: 1;
-  width: 300px;
+  width: 275px;
   -webkit-transition: .4s ease-in;
   transition: .4s ease-in;
 }
 
-.nav-toogler {
+.nav-toggler {
   margin-top: 5px;
   position: relative;
   display: inline-block;
@@ -462,31 +467,31 @@ span {
   cursor: pointer;
 }
 
-.nav-toogler::before,
-.nav-toogler::after {
+.nav-toggler::before,
+.nav-toggler::after {
   content: '';
   display: block;
   width: 30px;
   height: 3px;
-  background-color: salmon;
+  background-color: tomato;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-.nav-toogler::after {
+.nav-toggler::after {
   margin-top: 10px;
 }
 
-.nav-wrapper.active .nav-toogler::before,
-.nav-wrapper.active .nav-toogler::after {
+.nav-wrapper.active .nav-toggler::before,
+.nav-wrapper.active .nav-toggler::after {
   position: absolute;
   top: 50%;
-  background-color: salmon;
+  background-color: tomato;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
-.nav-wrapper.active .nav-toogler::after {
+.nav-wrapper.active .nav-toggler::after {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   margin-top: 0;
@@ -501,7 +506,6 @@ span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 900px;
   margin: 0 auto;
   padding: 15px 0 25px 0;
   border-bottom: 1px tomato solid;
@@ -528,12 +532,6 @@ span {
   height: auto;
 }
 
-.skillIcon:hover,
-.skillIcon:focus {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
 .skillIcon {
   width: 100%;
   max-width: 100px;
@@ -543,24 +541,91 @@ span {
           filter: grayscale(100%);
 }
 
-.lightSection {
+.skillIcon:hover,
+.skillIcon:focus {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+section {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.lightSection {
   background-color: white;
+}
+
+.clipDiagonal {
   -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
           clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
   padding: 150px 0 200px 0;
 }
 
-.darkSection {
-  margin: 0 auto;
+.clipChevron {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+  padding: 50px 0 150px 0;
+}
+
+.gridPortfolio {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 50px 0;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin: 50px 0;
+}
+
+.portfolioLeft img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.portfolioLeft div {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+}
+
+.portfolioRight img {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+}
+
+.portfolioRight div {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#about h2 {
+  color: black;
+}
+
+#about div:nth-child(2) {
+  border-right: 1px solid tomato;
+  border-left: 1px solid tomato;
+  padding: 0 30px;
+}
+
+#about p {
+  font-size: 23px;
+  line-height: 35px;
+}
+
+#portfolio img {
+  height: 171px;
+  width: 300px;
+  border-radius: 10px;
 }

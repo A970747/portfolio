@@ -7,28 +7,28 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" media="all"/>
     <title>Document</title>
 </head>
-<body>
+<body id="top">
+    <div class="nav-wrapper">
+        <nav>
+            <ul class="nav-items">
+                <li><a href="#top">top</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <div class="nav-toggler"></div>
+        </nav>
+    </div>
     <header>
-        <div class="nav-wrapper">
-            <nav>
-                <ul class="nav-items">
-                    <li><a href=""  target="_blank">top</a></li>
-                    <li><a href=""  target="_blank">skills</a></li>
-                    <li><a href="" target="_blank">portfolio</a></li>
-                    <li><a href="" target="_blank">contact</a></li>
-                </ul>
-                <div class="nav-toogler"></div>
-            </nav>
-        </div>
+
         <!-- <div id="hello" class="canvas">
             <canvas id="canvas" width="400" height="400" style="border:5px solid red"></canvas>
         </div> -->
         <div class="wrapperHeader">
             <div class="nameContainer">
-                <h1>
-                    <span class="title">Matt Jackson</span>
-                    <span class="title"> Web Developer</span>
-                </h1>
+                    <h2 class="title name hide">Matt Jackson</h2>
+                    <h1 class="title hide">Web Developer</h1>
             </div>
             <div class="resumeContainer">
                 <a class="resumeLink" href="" alt="Link resume" target="_blank">resume</a>
@@ -38,9 +38,9 @@
         </div>
     </header>
 
-    <section class="skillSection">
-        <h2>skills</h2>
-        <ul class="skillGrid">
+    <section id="skills" class="skillSection clipDiagonal lightSection">
+        <h2 >skills</h2>
+        <ul class="skillGrid wrapper-900">
             <li class="skillFlex"><img src="/styles/images/html-5.png" alt="html icon" class="skillIcon" aria-hidden="true"></img>html</li>
             <li class="skillFlex"><img src="/styles/images/css3.png" alt="css icon" class="skillIcon" aria-hidden="true"></img>css</li>
             <li class="skillFlex"><img src="/styles/images/sass.png" alt="sass icon" class="skillIcon" aria-hidden="true"></img>sass</li>
@@ -56,51 +56,78 @@
         </ul>
     </section>
 
-    <section class="darkSection">
+    <section id="portfolio" class="darkSection">
         <div class="wrapper-900">
             <h2>portfolio</h2>
-            <div class="portfolioPiece">
-                <img src="https://source.unsplash.com/random/300x200" alt="">
-                <h3>tv show thing</h3>
-                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            <div class="gridPortfolio portfolioLeft">
+                <img src="https://source.unsplash.com/random/200x200" alt="">
+                <div>
+                    <h3>TV Show Thing</h3>
+                    <h4>ReactJS - SASS - Firebase - RESTful API</h4>
+                    <p>Uses React and Firebase to allow user to search and filter a list of TV shows from an API. Firebase with authentication allows users to curate their own lists and create rankings within the list.</p>
+                </div>
             </div>
-            <div class="portfolioPiece">
-                <img src="https://source.unsplash.com/random/300x200" alt="">
-                <h3>guess the word</h3>
-                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            <div class="gridPortfolio portfolioRight">
+                <img src="./styles/images/guess-the-word-main.png" alt="">
+                <div>
+                    <h3>Guess the Word</h3>
+                    <h4>ReactJS - RESTful API</h4>
+                    <p>Utilizes the Miriam-Webster API to display the definitions for a word and users try to guess the word. Dynamically displays the results on the page. </p>
+                </div>
             </div>
-            <div class="portfolioPiece">
-                <img src="https://source.unsplash.com/random/300x200" alt="">
-                <h3>guess the word</h3>
-                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            <div class="gridPortfolio portfolioLeft">
+                <img src="https://source.unsplash.com/random/200x200" alt="">
+                <div>
+                    <h3>First time Dev Helper</h3>
+                    <h4>HTML - SASS - jQuery</h4>
+                    <p>A short quiz intended to help first time developers select which technologies to start learning. Utilizes jQuery.</p>
+                </div>
+            </div>
+            <div class="gridPortfolio portfolioRight">
+                <img src="https://source.unsplash.com/random/200x200" alt="">
+                <div>
+                    <h3>PSD Conversion</h3>
+                    <h4>HTML - SASS - Responsive Design</h4>
+                    <p>A simple PSD conversion with emphasis on a responsive design.</p>
+                </div>
             </div>
         </div>
     </section>
     
-    <section class="lightSection">
+    <section id="about" class="lightSection clipChevron">
         <div class="wrapper-900">
             <h2>about me</h2>
-            <div class="portfolioPiece">
-                <img src="https://source.unsplash.com/random/400x400" alt="">
-                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
+            <div>
+                <p>Hi! I'm Matt. A little about me, I spent several years working for a large, $500m+ annual revenue, transportation firm as an Analyst. Analytics being a recent trend in trucking, self-learning was imperative. I became proficient in MySQL, SSAS, SSRS, dashboarding, data vis and data integrity. Working in a team, I created analysis with specific, actionable call-outs and presented them to business units, including C-Level executives.  This learning influenced my decision to become a web developer. </p>
+                <p>Outside of work I enjoy volunteering, Formula 1 and Soccer. I enjoy teaching and helping others, I volunteer coached kids soccer for 10 years.</p>
             </div>
+        </div>
+        <div class="wrapper-900">
+            <img src="" alt="">
         </div>
     </section>
 
-    <section class="darkSection">
-        <div class="wrapper-900">
-            <h2>about me</h2>
-            <div class="portfolioPiece">
-                <p>description text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid voluptates natus beatae obcaecati reiciendis accusamus ducimus ex eius at quasi.</p>
-            </div>
-        </div>
+    <section id="contact" class="darkSection">
+        <h3>Contact Form</h3>
+        <form id="contactForm" action="https://formspree.io/mknqdowy" method="POST">
+            <label class="sr-only" for="formName" ></label>
+            <input class="nameInput" type="text" id="formName" name="formName" placeholder="Name" required >
+            <label class="sr-only" for="formEmail" ></label>
+            <input class="formEmail" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" id="formEmail" name="formEmail" placeholder="E-Mail" required>
+            <label class="sr-only" for="formSubject"></label>
+            <input class="formSubject" type="text" id="formSubject" name="formSubject" placeholder="Subject" required>
+            <label class="sr-only" for="formMessage"></label>
+            <textarea class="formMessage" name="formMessage" id="formMessage" placeholder="Message" required></textarea>
+            <p id="formStatus"></p>
+        </form>
+        <button id="formSend" class="formSend" type="submit"  target="_blank" form="contactForm" rel="noopener noreferrer">submit</button>
     </section>
 
     <footer>
     </footer>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6' crossorigin='anonymous'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="./scripts/script.js"></script>
     <!-- <script type="text/javascript" src="./node_modules/pts/dist/pts.js"></script>
     <script type="text/javascript" src="./scripts/star-script.js"></script> -->

@@ -22,7 +22,9 @@ ul {
 }
 
 .wrapper-900 {
+    width: 75%;
     max-width: 900px;
+    margin: 0 auto;
 }
 
 .wrapperHeader {
@@ -69,14 +71,15 @@ ul {
     list-style: none;
 }
 
-h1{
+h1,
+.name {
     display: grid;
     justify-content: center;
     text-transform: uppercase;
     font-size: 70px;
     font-size: calc(4vh + 2.5vw);
-    line-height: 75px;
-    line-height: calc(4.5vh + 2.5vw);
+    line-height: 60px;
+    line-height: calc(2vh + 2vw);
     letter-spacing: 2px;
     margin: 15px;
 }
@@ -86,9 +89,17 @@ h2 {
     color: white;
 }
 
+p {
+    text-align: justify;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.title,
 span {
-    transform: skew(-10deg);
-    display: block;
+    transform: skew(-12deg);
     float: left;
     text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px, $shadow 5px 5px, $shadow 6px 6px;
     min-width: 10px;
@@ -97,6 +108,8 @@ span {
 }
 
 .title{
+    display: inline;
+
     &:nth-child(1){
         color: white;
     }
@@ -106,12 +119,6 @@ span {
 }
 
 .skillSection {
-    display: grid;
-    justify-content: center;
-    background-color: white;
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
-    padding: 150px 0 200px 0;
-
     h2 {
         color: black;
         text-align: center;
@@ -131,7 +138,7 @@ span {
     top: 0;
     z-index: 1;
 
-    nav{
+    nav {
         height: 55px;
         display: flex;
         justify-content: center;
@@ -140,11 +147,13 @@ span {
             color: #888;
             text-decoration: none;
             transition: .3s;
+            font-size: 20px;
+            font-size: calc(2vh);
         }
     
         a:focus,
         a:hover {
-            color: white;
+            color: tomato;
         }
     
         ul {
@@ -153,21 +162,21 @@ span {
     }
 }
 
-.nav-wrapper ul{
+.nav-wrapper ul {
     opacity: 0;
     width: 0;
     overflow: hidden;
 }
 
-.nav-wrapper.active ul{
+.nav-wrapper.active ul {
     display: flex;
     justify-content: space-around;
     opacity: 1;
-    width: 300px;
+    width: 275px;
     transition: .4s ease-in;
 }
 
-.nav-toogler{
+.nav-toggler {
     margin-top: 5px;
     position: relative;
     display: inline-block;
@@ -177,28 +186,28 @@ span {
     cursor: pointer;
 }
 
-.nav-toogler::before,
-.nav-toogler::after{
+.nav-toggler::before,
+.nav-toggler::after {
     content: '';
     display: block;
     width: 30px;
     height: 3px;
-    background-color: salmon;
+    background-color: tomato;
     transition: .4s;
 }
 
-.nav-toogler::after {
+.nav-toggler::after {
     margin-top: 10px;
 }
 
-.nav-wrapper.active .nav-toogler::before,
-.nav-wrapper.active .nav-toogler::after{
+.nav-wrapper.active .nav-toggler::before,
+.nav-wrapper.active .nav-toggler::after{
     position: absolute;
     top: 50%;
-    background-color: salmon;
+    background-color: tomato;
     transform: rotate(135deg);
 }
-.nav-wrapper.active .nav-toogler::after {
+.nav-wrapper.active .nav-toggler::after {
     transform: rotate(-135deg);
     margin-top: 0;
 }
@@ -208,7 +217,6 @@ span {
     grid-template-columns: repeat(auto-fit, minmax(15px, 100px));
     grid-gap: 50px;
     justify-content: center;
-    max-width:900px;
     margin: 0 auto;
     padding: 15px 0 25px 0;
     border-bottom: 1px tomato solid;
@@ -228,11 +236,6 @@ span {
     height: auto;
 }
 
-.skillIcon:hover,
-.skillIcon:focus {
-    filter: grayscale(0%);
-}
-
 .skillIcon {
     width: 100%;
     max-width: 100px;
@@ -241,17 +244,81 @@ span {
     filter: grayscale(100%);
 }
 
-.lightSection {
+.skillIcon:hover,
+.skillIcon:focus {
+    filter: grayscale(0%);
+}
+
+section {
     display: grid;
     justify-content: center;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.lightSection {
     background-color: white;
+}
+
+.clipDiagonal {
     clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
     padding: 150px 0 200px 0;
 }
 
-.darkSection {
-    margin: 0 auto;
+.clipChevron {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+    padding: 50px 0 150px 0;
+}
+
+.gridPortfolio {
     display: grid;
-    justify-content: center;
-    padding: 50px 0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin: 50px 0;
+}
+
+.portfolioLeft {
+    img {
+        grid-column: 1 / 2;
+    }
+
+    div {
+        grid-column: 2 / 5;
+    }
+}
+
+.portfolioRight {
+    img {
+        grid-column: 5 / 6;
+    }
+
+    div {
+        grid-column: 1 / 5;
+        grid-row: 1/2;
+    }
+}
+
+#about {
+    h2 {
+        color: black;
+    }
+
+    div:nth-child(2) {
+    border-right: 1px solid tomato;
+    border-left: 1px solid tomato;
+    padding: 0 30px;
+    }
+
+    p {
+    font-size: 23px;
+    line-height: 35px;
+    }
+}
+
+#portfolio {
+    img {
+        height: 171px;
+        width: 300px;
+        border-radius: 10px;
+    }
 }
