@@ -147,7 +147,6 @@ legend {
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal;
 }
 
 progress {
@@ -229,7 +228,6 @@ html {
   margin: -1px;
   border: 0;
   padding: 0;
-  white-space: nowrap;
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -241,14 +239,45 @@ html {
 }
 
 body {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   background: #0d0d0d;
   min-height: 100%;
+}
+
+body button:focus,
+body input:focus,
+body a:focus {
+  border: 1px solid tomato;
 }
 
 ul {
   padding: 0;
   list-style: none;
+}
+
+h1,
+.name {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-size: calc(4vh + 2.5vw);
+  line-height: 60px;
+  line-height: calc(2vh + 2vw);
+  letter-spacing: 2px;
+  margin: 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #FDFDFD;
+}
+
+p {
+  text-align: justify;
 }
 
 .wrapper-900 {
@@ -302,7 +331,7 @@ ul {
 }
 
 .resumeContainer .resumeLink {
-  color: white;
+  color: #FDFDFD;
   padding: 5px 10px;
   border: 1px rgba(0, 0, 0, 0.45) solid;
   border-radius: 15px;
@@ -320,31 +349,6 @@ ul {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   list-style: none;
-}
-
-h1,
-.name {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-transform: uppercase;
-  font-size: 70px;
-  font-size: calc(4vh + 2.5vw);
-  line-height: 60px;
-  line-height: calc(2vh + 2vw);
-  letter-spacing: 2px;
-  margin: 15px;
-}
-
-h2 {
-  text-align: center;
-  color: white;
-}
-
-p {
-  text-align: justify;
 }
 
 .hide {
@@ -367,7 +371,7 @@ span {
 }
 
 .title:nth-child(1) {
-  color: white;
+  color: #FDFDFD;
 }
 
 .title:nth-child(2) {
@@ -455,6 +459,7 @@ span {
   width: 275px;
   -webkit-transition: .4s ease-in;
   transition: .4s ease-in;
+  border-radius: 5px;
 }
 
 .nav-toggler {
@@ -558,7 +563,7 @@ section {
 }
 
 .lightSection {
-  background-color: white;
+  background-color: #FDFDFD;
 }
 
 .clipDiagonal {
@@ -571,42 +576,6 @@ section {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
   padding: 50px 0 150px 0;
-}
-
-.gridPortfolio {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  margin: 50px 0;
-}
-
-.portfolioLeft img {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-}
-
-.portfolioLeft div {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2 / 5;
-}
-
-.portfolioRight img {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 5 / 6;
-}
-
-.portfolioRight div {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1 / 5;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
 }
 
 #about h2 {
@@ -624,8 +593,140 @@ section {
   line-height: 35px;
 }
 
+#portfolio {
+  color: #FDFDFD;
+}
+
 #portfolio img {
-  height: 171px;
-  width: 300px;
-  border-radius: 10px;
+  max-width: 100%;
+}
+
+.gridPortfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 20px;
+  margin: 25px 0;
+}
+
+.gridPortfolio * {
+  margin: 10px 0;
+}
+
+.gridPortfolio h3,
+.gridPortfolio p {
+  color: #FDFDFD;
+}
+
+.gridPortfolio h4 {
+  color: tomato;
+}
+
+.gridPortfolio a {
+  color: #d8d8d8;
+}
+
+.gridPortfolio a:hover,
+.gridPortfolio a:focus {
+  color: #383838;
+}
+
+.portfolioLeft {
+  border-bottom: 1px ridge #383838;
+  border-left: 1px solid #383838;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.portfolioLeft img {
+  border-radius: 5px;
+}
+
+.portfolioRight {
+  border-bottom: 1px solid #383838;
+  border-right: 1px solid #383838;
+  border-radius: 5px;
+}
+
+.portfolioRight img {
+  border-radius: 5px;
+  justify-self: flex-end;
+}
+
+#contact h3 {
+  text-align: center;
+  color: #FDFDFD;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact form #formName,
+#contact form input[type=email] {
+  -ms-flex-preferred-size: calc(50% - 10px);
+      flex-basis: calc(50% - 10px);
+  margin-bottom: 10px;
+}
+
+#contact form input[type=text],
+#contact form textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 10px;
+}
+
+#contact form textarea {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  height: 100px;
+}
+
+#contact button {
+  background-color: #383838;
+  border: none;
+  border-radius: 5px;
+  color: #FDFDFD;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 10px auto;
+  padding: 5px;
+  width: 50%;
+}
+
+#contact button:hover,
+#contact button:focus {
+  color: tomato;
+  border: 1px solid #FDFDFD;
+}
+
+@media (max-width: 400px) {
+  .gridPortfolio a:hover,
+  .gridPortfolio a:focus {
+    border: 1px solid #FDFDFD;
+  }
+  .portfolioLeft a {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
 }
