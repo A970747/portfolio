@@ -42,7 +42,6 @@ p {
 }
 
 .wrapper-900 {
-	width: 75%;
 	max-width: 900px;
 	margin: 0 auto;
 }
@@ -326,20 +325,12 @@ section {
 }
 
 .portfolioLeft {
-	border-bottom: 1px ridge $secondaryBackground;
-	border-left: 1px solid $secondaryBackground;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-top-left-radius: 5px;
-
 	img {
 			border-radius: 5px;
 	}
 }
 
 .portfolioRight {
-	border-bottom: 1px solid $secondaryBackground;
-	border-right: 1px solid $secondaryBackground;
 	border-radius: 5px;
 
 	img {
@@ -401,6 +392,28 @@ section {
 	}
 
 @media (max-width: 400px) {
+	.nav-wrapper {
+		margin-right: 30px;
+	}
+
+	.nav-toggler {
+		width: 30px;
+	}
+
+	.clipDiagonal {
+		clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+		padding: 50px 0 100px 0;
+	}
+	
+	.clipChevron {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
+		padding: 25px 0 50px 0;
+	}
+
+	.wrapper-900 {
+		width: 95%;
+	}
+
 	.gridPortfolio {
 		a:hover,
 		a:focus {
@@ -411,6 +424,15 @@ section {
 	.portfolioLeft {
 		a {
 			grid-row: 2 / 3;
+		}
+	}
+
+	#contact{	
+		form {
+			#formName,
+			#formEmail {
+				flex-basis: 100%;
+			}
 		}
 	}
 }
