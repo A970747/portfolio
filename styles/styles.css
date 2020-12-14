@@ -234,20 +234,36 @@ html {
   overflow: hidden;
 }
 
+/* $primaryBlack: #040405;
+$primaryWhite: #FDFDFD;
+
+$primaryBackground: #0d0d0d;
+$secondaryBackground: #383838;
+$tertiaryBackground: #d8d8d8;
+
+$primaryAccent: tomato; */
+/* Set
+*   0A4988
+*   0070A9
+*   0089BB
+*   FFFDE7
+*   FFFDd0 
+*/
 html {
   height: 100%;
 }
 
 body {
   font-family: "Fjalla One", sans-serif;
-  background: #0d0d0d;
+  background: -webkit-gradient(linear, left top, right top, from(#0a4988), to(#007dfa));
+  background: linear-gradient(90deg, #0a4988 0%, #007dfa 100%);
   min-height: 100%;
 }
 
 body button:focus,
 body input:focus,
 body a:focus {
-  border: 1px solid tomato;
+  border: 1px solid #FDFDD1;
 }
 
 ul {
@@ -359,7 +375,7 @@ span {
   -webkit-transform: skew(-12deg);
           transform: skew(-12deg);
   float: left;
-  text-shadow: #383838 1px 1px, #383838 2px 2px, #383838 3px 3px, #383838 4px 4px, #383838 5px 5px, #383838 6px 6px;
+  text-shadow: #3B4D5E 1px 1px, #3B4D5E 2px 2px, #3B4D5E 3px 3px, #3B4D5E 4px 4px, #3B4D5E 5px 5px, #3B4D5E 6px 6px;
   min-width: 10px;
   min-height: 10px;
   position: relative;
@@ -374,7 +390,7 @@ span {
 }
 
 .title:nth-child(2) {
-  color: tomato;
+  color: #FDFDD1;
 }
 
 .skillSection h2 {
@@ -435,7 +451,7 @@ span {
 
 .nav-wrapper nav a:focus,
 .nav-wrapper nav a:hover {
-  color: tomato;
+  color: #FDFDD1;
 }
 
 .nav-wrapper nav ul {
@@ -477,7 +493,7 @@ span {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: tomato;
+  background-color: #FDFDD1;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -490,7 +506,7 @@ span {
 .nav-wrapper.active .nav-toggler::after {
   position: absolute;
   top: 50%;
-  background-color: tomato;
+  background-color: #FDFDD1;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
 }
@@ -512,8 +528,8 @@ span {
           justify-content: center;
   margin: 0 auto;
   padding: 15px 0 25px 0;
-  border-bottom: 1px tomato solid;
-  border-top: 1px tomato solid;
+  border-bottom: 1px #FDFDD1 solid;
+  border-top: 1px #FDFDD1 solid;
 }
 
 .skillFlex {
@@ -582,8 +598,8 @@ section {
 }
 
 #about div:nth-child(2) {
-  border-right: 1px solid tomato;
-  border-left: 1px solid tomato;
+  border-right: 1px solid #FDFDD1;
+  border-left: 1px solid #FDFDD1;
   padding: 0 30px;
 }
 
@@ -625,16 +641,16 @@ section {
 }
 
 .gridPortfolio h4 {
-  color: tomato;
+  color: #FDFDD1;
 }
 
 .gridPortfolio a {
-  color: #d8d8d8;
+  color: #FDFDD1;
 }
 
 .gridPortfolio a:hover,
 .gridPortfolio a:focus {
-  color: #383838;
+  color: #3B4D5E;
 }
 
 .portfolioLeft img {
@@ -690,7 +706,7 @@ section {
 }
 
 #contact button {
-  background-color: #383838;
+  background-color: #3B4D5E;
   border: none;
   border-radius: 5px;
   color: #FDFDFD;
@@ -704,7 +720,7 @@ section {
 
 #contact button:hover,
 #contact button:focus {
-  color: tomato;
+  color: #FDFDD1;
   border: 1px solid #FDFDFD;
 }
 
